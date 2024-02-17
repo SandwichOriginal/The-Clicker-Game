@@ -38,29 +38,33 @@ target.onclick = () => {
 };
 
 open_menu_button.onclick = () => {
-    open_menu_button.classList.add("slideright-open-menu-button");
-    menu.style = "display: inline-block;";
-    menu.classList.add("slideleft-menu");
-    setTimeout(() => {
-        open_menu_button.classList.remove("slideright-open-menu-button");
-        open_menu_button.style = "display: none; right: -100px;";
-    }, 1000);
-    setTimeout(() => {
-        menu.classList.remove("slideleft-menu");
-        menu.style.right = "0";
-    }, 2000);
+    if (menu.classList.value != "menu slideright-menu") {
+        open_menu_button.classList.add("slideright-open-menu-button");
+        menu.style = "display: inline-block;";
+        menu.classList.add("slideleft-menu");
+        setTimeout(() => {
+            open_menu_button.classList.remove("slideright-open-menu-button");
+            open_menu_button.style = "display: none; right: -100px;";
+        }, 1000);
+        setTimeout(() => {
+            menu.classList.remove("slideleft-menu");
+            menu.style.right = "0";
+        }, 2000);
+    };
 };
 
 close_menu_button.onclick = () => {
-    menu.classList.add("slideright-menu");
-    open_menu_button.style.display = "inline-block";
-    open_menu_button.classList.add("slideleft-open-menu-button");
-    setTimeout(() => {
-        menu.classList.remove("slideright-menu");
-        menu.style = "right: -450px; display: none;"
-    }, 2000);
-    setTimeout(() => {
-        open_menu_button.classList.remove("slideleft-open-menu-button")
-        open_menu_button.style.right = "0";
-    }, 1000);
+    if (menu.classList.value != "menu slideleft-menu") {
+        menu.classList.add("slideright-menu");
+        open_menu_button.style.display = "inline-block";
+        open_menu_button.classList.add("slideleft-open-menu-button");
+        setTimeout(() => {
+            menu.classList.remove("slideright-menu");
+            menu.style = "right: -450px; display: none;"
+        }, 2000);
+        setTimeout(() => {
+            open_menu_button.classList.remove("slideleft-open-menu-button");
+            open_menu_button.style.right = "0";
+        }, 1000);
+    };
 };
