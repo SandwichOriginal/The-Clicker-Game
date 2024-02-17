@@ -4,7 +4,6 @@ const target = document.getElementById("target");
 const open_menu_button = document.getElementById("open-menu-button");
 const close_menu_button = document.getElementById("close-menu-button");
 const menu = document.getElementById("menu");
-
 let data;
 
 // Load / Create Data
@@ -14,19 +13,25 @@ if (localStorage.getItem("Data")) {
     localStorage.setItem("Data", JSON.stringify({
         "clicks": 0,
         "perclick": 1,
+        "persecond": 0,
         "skin": "default"
     }));
     data = JSON.parse(localStorage.getItem("Data"));
 };
 
-// Tick
+// Load & Save
 setInterval(() => {
     if (localStorage.getItem("Data") && data) {
         localStorage.setItem("Data", JSON.stringify(data));
-        counter.innerHTML =  data.clicks;
+        counter.innerHTML = `<i class="fa-solid fa-arrow-pointer"></i> ` + data.clicks;
         target.classList.add(data.skin);
     };
-}, 10);
+}, 1);
+
+// Autoclicker Persecond
+setInterval(() => {
+    data.clicks += data.persecond;
+}, 1000);
 
 // Target Clicked
 target.onclick = () => {
