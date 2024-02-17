@@ -1,0 +1,61 @@
+@import url("skins.css");
+@import url("animations.css");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    user-select: none;
+    font-family: Arial;
+    transition: all 0.5s;
+}
+
+body {
+    margin: 30px;
+    overflow: hidden;
+
+}
+
+.counter {
+    font-size: 50px;
+    text-shadow: 0px 0px 1px black;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.counter:hover {
+    transform: scale(1.2);
+}
+
+.target {
+
+}
+
+.target:hover {
+    transform: scale(1.05);
+}
+
+.open-menu-button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: rgb(50, 50, 50);
+    color: rgb(255, 255, 255);
+    width: 100px;
+    height: 30px;
+    border-bottom-left-radius: 10px;
+    cursor: pointer;
+}
+
+.menu {
+    position: absolute;
+    right: -450px;
+    top: 0;
+    height: 100%;
+    width: 450px;
+    background: black;
+    opacity: 0.9;
+    display: none;
+}

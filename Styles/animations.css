@@ -1,0 +1,52 @@
+@keyframes click {
+    50% {
+        transform: scale(1.15);
+    }
+    100% {
+        transform: scale(1.05);
+    }
+}
+
+.click {
+    animation: click 0.2s;
+}
+
+@keyframes slideright-open-menu-button {
+    100% {
+        right: -100px;
+    }
+}
+
+.slideright-open-menu-button {
+    animation: slideright-open-menu-button 1s;
+}
+
+@keyframes slideleft-open-menu-button {
+    100% {
+        right: 0;
+    }
+}
+
+.slideleft-open-menu-button {
+    animation: slideleft-open-menu-button 1s;
+}
+
+@keyframes slideleft-menu {
+    100% {
+        right: 0;
+    }
+}
+
+.slideleft-menu {
+    animation: slideleft-menu 2s;
+}
+
+@keyframes slideright-menu {
+    100% {
+        right: -450px;
+    }
+}
+
+.slideright-menu {
+    animation: slideright-menu 2s;
+}
