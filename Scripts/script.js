@@ -65,7 +65,7 @@ close_menu_button.onclick = () => {
         open_menu_button.classList.add("slideleft-open-menu-button");
         setTimeout(() => {
             menu.classList.remove("slideright-menu");
-            menu.style = "right: -450px; display: none;"
+            menu.style = "right: -450px; display: none;";
         }, 2000);
         setTimeout(() => {
             open_menu_button.classList.remove("slideleft-open-menu-button");

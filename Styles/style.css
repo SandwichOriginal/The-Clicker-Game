@@ -59,3 +59,13 @@ body {
     opacity: 0.9;
     display: none;
 }
+
+.open-upgrades-button {
+    width: 200px;
+    height: 50px;
+    background-image: url("../Images/Paper\ Texture.jpg");
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    border-radius: 15px;
+    font-weight: 600;
+}
